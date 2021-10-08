@@ -74,7 +74,8 @@ def main(argv):
 		sys.exit(1)
 
 	### Get filenames and target directory ###
-	filename = list(GetBaseName(source_file))
+	filename, file_extension = os.path.splitext(source_file)
+	filename = list(filename)
 	hname = list(filename)
 	target_dir = GetDirName(source_file)
 
